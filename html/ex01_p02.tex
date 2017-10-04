@@ -1,0 +1,61 @@
+
+% This LaTeX was auto-generated from MATLAB code.
+% To make changes, update the MATLAB code and republish this document.
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{color}
+
+\sloppy
+\definecolor{lightgray}{gray}{0.5}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+    
+    \begin{verbatim}
+clear;
+clc;
+
+
+%Problem 2
+
+duration = 4;
+
+Fs = 1000; % sampling frequency
+f = 0.3*Fs; % normalised frequency
+samples = 0:1/Fs:duration; % array of samples, from 0 to duration with interval of 1/Fs = sampling period.
+signal = sin(2*pi*f*samples);
+disp('Playing with Fs = 1000')
+soundsc(signal, Fs);
+
+pause(5)
+
+Fs = 3000;
+f = 0.3*Fs;
+samples = 0:1/Fs:duration;
+signal = sin(2*pi*f*samples);
+disp('Playing with Fs = 3000')
+soundsc(signal, Fs);
+
+pause(5)
+
+Fs = 10000;
+f = 0.3*Fs;
+samples = 0:1/Fs:duration;
+signal = sin(2*pi*f*samples);
+disp('Playing with Fs = 120000')
+soundsc(signal, Fs);
+
+pause(5)
+\end{verbatim}
+
+        \color{lightgray} \begin{verbatim}Playing with Fs = 1000
+Playing with Fs = 3000
+Playing with Fs = 120000
+\end{verbatim} \color{black}
+    
+
+
+\end{document}
+    
